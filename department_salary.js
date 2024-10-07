@@ -99,6 +99,16 @@ const company = {
 }
 
 //Task 3
+// Calculates the total salary for the company
+function calculateCompanySalary(company) {
+  let totalCompanySalary = 0;
 
-  
-  
+  for (const department of company.departments) {
+      totalCompanySalary += calculateDepartmentSalary(department); // Adds each department's total salary 
+
+  return totalCompanySalary; 
+}
+}
+// Calculates the total salary for the company and outputs it
+const totalSalary = calculateCompanySalary(company);
+console.log(`Total salary for the company: ${totalSalary}`);
